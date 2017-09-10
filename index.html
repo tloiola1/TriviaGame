@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TheTriviaGame</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Black&amp;subset=latin-ext" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	
+
+</head>
+<body >
+	<div class="container">
+	<header class="">
+		<div class="">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h1 class="jumbotron text-center " style="background-color: inherit; border-bottom: 2px solid gray; border-radius: 0">
+						<strong>The Trivia Game</strong>
+					</h1>
+				</div>
+			</div>
+		</div>				
+		<div class="startButton text-center">
+			<button class="btn btn-lg btn-primary">Start</button>
+		</div>
+		
+		<div class="text-center timeRemaining">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h3>Time Remaining: <span class="Sec"><strong>30</strong></span> Seconds</h3>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	 <!-- This is the main section -->
+
+	
+	<div class="quizContent">
+		<section class="text-center">
+			<div class="row">
+				<div class="quiz1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h3>How many calories would you burn per hour if you bang your had against a wall?</h3>
+				</div>
+				<div class="answer">
+					<label class="col-lg-4">
+						<input class="answers1" type="radio" name="answer1" value="a">
+						150 Calories
+					</label>
+					<label class="col-lg-4">
+						<input class="answers2" type="radio" name="answer1" value="b">
+						500 Calories
+					</label>
+					<label class="col-lg-4">
+						<input class="answers3" type="radio" name="answer1" value="c">
+						Much more than that since you are going to rush to the ER
+					</label>
+				</div>
+
+				<div class="quiz2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h3>What is Cherophobia?</h3>
+				</div>
+				<div class="answer">
+					<label class="col-lg-4">
+						<input class="answers1" type="radio" name="answer2" value="a">
+						Someone that cannot live without cheerios
+					</label>
+					<label class="col-lg-4">
+						<input class="answers2" type="radio" name="answer2" value="b">
+						Fear of fun
+					</label>
+					<label class="col-lg-4">
+						<input class="answers3" type="radio" name="answer2" value="c">
+						Fan Clube of the first vehicle in the modern automotive era to take a traditional car body, made from 1957 to 1979, Ford Ranchero
+					</label>
+				</div>	
+
+				<div class="quiz3 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h3>What is the best country of the world?</h3>
+				</div>
+				<div class="answer">
+					<label class="col-lg-4">
+						<input class="answers1" type="radio" name="answer3" value="a">
+						USA
+					</label>
+					<label class="col-lg-4">
+						<input class="answers2" type="radio" name="answer3" value="b">
+						Brasil (which spells with "s")
+					</label>
+					<label class="col-lg-4">
+						<input class="answers3" type="radio" name="answer3" value="c">
+						It is a tie
+					</label>
+				</div>
+
+				<div class="quiz3 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h3>Where is Waldo really?"</h3>
+				</div>
+				<div class="answer">
+					<label class="col-lg-4">
+						<input class="answers1" type="radio" name="answer4" value="a">
+						Antarctica
+					</label>
+					<label class="col-lg-4">
+						<input class="answers2" type="radio" name="answer4" value="b">
+						Exploring the Pacific Ocean
+					</label>
+					<label class="col-lg-4">
+						<input class="answers3" type="radio" name="answer4" value="c">
+						Minding his own business, so stop asking
+					</label>
+				</div>
+
+				<div class="submitButton text-center">
+					<button id="btn" class="btn btn-lg btn-success" value="Submit">Submit</button>
+				</div>
+
+			</div>
+		</section>
+	</div>
+
+		<aside class="text-center score">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h3>Correct Asnwers: <span class="correct"></span></h3>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h3>Wrong Answers: <span class="incorrect"></span></h3>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h3>Not Answered: <span class="notAnswered"></span></h3>
+				</div>
+				<div class="restartButton col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<br><button class="btn btn-lg btn-primary">Try Again</button>
+				</div>
+			</div>
+		</aside>
+
+
+
+</div>
+	<script src="assets/javascript/app.js" type="text/javascript"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Title</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row spacer-row"></div>
+
+        <div class="row">
+            <div class="col-sm-1 col-md-2"></div>
+            <div class="col-sm-10 col-md-8">
+
+                <div id="quiz-container" class="well"> 
+
+                    <!-- Quiz header, doesn't change -->
+                    <!-- <div id="quiz-header" class="text-center">
+                        <h1>Trivia Game</h1>
+                        <hr>
+                    </div> -->
+
+                    <!-- Quiz start button -->
+                    <!-- <div id="quiz-start" class="text-center">
+                        <button id="start-button" class="btn btn-lg btn-primary">Start</button>
+                    </div> -->
+
+                    <!-- Quiz body to contain questions and submit -->
+                    <!-- <div id="quiz-body"> -->
+
+                        <!-- timer section --><!-- 
+                        <div id="timer" class="text-center">
+                            <h3>Time Remaining:
+                                <span id="time-remaining">60</span></h3>
+                        </div> -->
+
+                        <!-- questions section -->
+                       <!--  <div id="questions" class="text-center">
+
+                            <div class="question-container">
+                                <div id="question1" class="question">
+                                    How many F's are in this sentence: <br>
+                                    FINISHED FILES ARE THE RESULT OF YEARS OF SCIENTIFIC STUDY.
+                                </div>
+                                <div id="answers1">
+                                    <label class="radio-inline" for="q1-a1"><input type="radio" id="q1-a1" name="q1-answer" value="a">2</label>
+                                    <label class="radio-inline" for="q1-a2"><input type="radio" id="q1-a2" name="q1-answer" value="b">3</label>
+                                    <label class="radio-inline" for="q1-a3"><input type="radio" id="q1-a3" name="q1-answer" value="c">4</label>
+                                    <label class="radio-inline" for="q1-a4"><input type="radio" id="q1-a4" name="q1-answer" value="d">5</label>
+                                </div>
+                            </div>
+
+                            <div class="question-container">
+                                <div id="question2" class="question">
+                                    John has two coins that add up to $0.55, one is not a nickel. What two coins does he have?
+                                </div>
+                                <div id="answers2">
+                                    <label class="radio-inline" for="q2-a1"><input type="radio" id="q2-a1" name="q2-answer" value="a">2x quarters</label>
+                                    <label class="radio-inline" for="q2-a2"><input type="radio" id="q2-a2" name="q2-answer" value="b">1x half-dollar, 1x nickel</label>
+                                    <label class="radio-inline" for="q2-a3"><input type="radio" id="q2-a3" name="q2-answer" value="c">55x pennies</label>
+                                    <label class="radio-inline" for="q2-a4"><input type="radio" id="q2-a4" name="q2-answer" value="d">None of the above</label>
+                                </div>
+                            </div>
+
+                            <div class="question-container">
+                                <div id="question3" class="question">
+                                    If there are 6 apples on a table and you take 4, how many apples are there?
+                                </div>
+                                <div id="answers3">
+                                    <label class="radio-inline" for="q3-a1"><input type="radio" id="q3-a1" name="q3-answer" value="a">2</label>
+                                    <label class="radio-inline" for="q3-a2"><input type="radio" id="q3-a2" name="q3-answer" value="b">4</label>
+                                    <label class="radio-inline" for="q3-a3"><input type="radio" id="q3-a3" name="q3-answer" value="c">6</label>
+                                    <label class="radio-inline" for="q3-a4"><input type="radio" id="q3-a4" name="q3-answer" value="d">10</label>
+                                </div>
+                            </div>
+
+                            <div class="question-container">
+                                <div id="question4" class="question">
+                                    If there are 12 fish and half of them drown, how many are there?
+                                </div>
+                                <div id="answers4">
+                                    <label class="radio-inline" for="q4-a1"><input type="radio" id="q4-a1" name="q4-answer" value="a">12</label>
+                                    <label class="radio-inline" for="q4-a2"><input type="radio" id="q4-a2" name="q4-answer" value="b">6</label>
+                                    <label class="radio-inline" for="q4-a3"><input type="radio" id="q4-a3" name="q4-answer" value="c">2</label>
+                                    <label class="radio-inline" for="q4-a4"><input type="radio" id="q4-a4" name="q4-answer" value="d">0</label>
+                                </div>
+                            </div> -->
+
+                            <!-- quiz submit button -->
+                          <!--   <div id="quiz-submit" class="text-center">
+                                <button id="submit-button" class="btn btn-lg btn-success">Submit!</button>
+                            </div>
+                        </div>
+                    </div>
+ -->
+                    <!-- Quiz Results -->
+                    <!-- <div id="quiz-results" class="text-center">
+                        <h3 id="congrats">Congrats, you finished!</h3>
+                        <h3 id="times-up">Times up! Here's your score.</h3>
+                        <br>
+                        <p>Grade:
+                            <span id="score-grade">0%</span></p>
+                        <p>Correct Answers:
+                            <span id="score-correct">0</span></p>
+                        <p>Incorrect Answers:
+                            <span id="score-incorrect">0</span></p>
+                        <p>Unanswered:
+                            <span id="score-unanswered">0</span></p>
+                        <div id="quiz-restart" class="text-center">
+                            <button id="restart-button" class="btn btn-lg btn-warning">Restart</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-sm-1 col-md-2"></div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    	
+    </script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html> -->
+
+
+
+
+
