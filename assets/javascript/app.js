@@ -9,7 +9,7 @@
   incorrect: 0,
   notAnswered: 0,
   answerSheet: ['a', 'b', 'c', 'c'],
-  winCondition: 'none',
+  winTest: 'none',
   
   
   runTime: function () {
@@ -69,28 +69,26 @@
     
     var questionArray = ['answer1', 'answer2', 'answer3', 'answer4'];
     var answerArray = [];
-    //------------------------
 
         for (var i = 0; i < questionArray.length; i++) {
 
             var questionAnswers = document.getElementsByName(questionArray[i]);
 
-            var answered = false;
+            var isAnswered = false;
 
             for (var j = 0; j < questionAnswers.length; j++) {
                 // FIND SELECT ANSWER
                 if (questionAnswers[j].checked) {
                     answerArray.push(questionAnswers[j].value);
-                    answered = true;  
+                    isAnswered = true;  
                 }
             }
             // NOT ANSWERD
-            if (answered === false) {
+            if (isAnswered === false) {
                 answerArray.push('none');
             }
         }
-
-        // compare answer array to answer sheet
+        //POPULATE VARIABLES
         for (var k = 0; k < answerArray.length; k++) {
             if (answerArray[k] === 'none') {
                 this.notAnswered++;
@@ -103,12 +101,9 @@
             }
         }
 
-        // calculate overall grade
-        this.overallGrade = String((this.correctAnswers / 4) * 100) + '%';
         game.showScore();
     
  },
-//-----------------------------
     
     
  
@@ -128,7 +123,7 @@
       game.correct = 0;
       game.incorrect = 0;
       game.notAnswered = 0;
-      winCondition = 'none';
+      winTest = 'none';
 
       $('input[name="answer1"]').prop('checked', false);
       $('input[name="answer2"]').prop('checked', false);
