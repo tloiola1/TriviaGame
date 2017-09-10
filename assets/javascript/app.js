@@ -105,9 +105,6 @@
     
  },
     
-    
- 
-
   showScore: function(){
     $(".score").show();
     $(".correct").text(game.correct);
@@ -115,9 +112,6 @@
     $(".notAnswered").text(game.notAnswered);
 
     $(".restartButton").on("click", function(){
-
-
-
 
       game.stop();
       game.correct = 0;
@@ -135,9 +129,14 @@
 
 
     });
-  }
+  },
+
 
 
 };
     game.start();
 
+$(".submitButton").on('click', function () {
+  game.winTest = 'submitted';
+  game.calculateScore();
+});
