@@ -1,8 +1,8 @@
  var intervalId;
-
+ var myTimer = 120;
   var game ={
   
-  timer : 30,
+  timer : myTimer,
   orangeWarning: 15,
   redWarning: 5,
   correct: 0,
@@ -58,7 +58,7 @@
       $(".Sec").html("<strong>"+game.timer+"</strong>");
       $(".timeRemaining").show();
       game.stop();
-      game.timer = 30;
+      game.timer = myTimer;
       game.runTime();
     })
   },
@@ -114,6 +114,7 @@
     $(".restartButton").on("click", function(){
 
       game.stop();
+      game.timer = myTimer;
       game.correct = 0;
       game.incorrect = 0;
       game.notAnswered = 0;

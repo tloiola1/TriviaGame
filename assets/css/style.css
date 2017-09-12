@@ -10,7 +10,16 @@ html, body{
     margin: 0;
     overflow-x: hidden;
 }
+.answer{
+    float: left !important;
+    padding-left: 40px;
+    padding-right: 40px;
+}
 
+ label{
+    font-size: 18px;
+    float:left;
+ }
 /*.anime{
     -webkit-animation: mymove 0.5s;
     animation: mymove 0.5s ;
